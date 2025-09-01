@@ -115,9 +115,9 @@ function App() {
 
         <section className="hero">
             <div className="logo">
-                <div className="logo-icon">
+                
                     <img src="/InterviewLensLogo.png" alt="Interview Lens Logo" />
-                </div>
+                
             </div>
         </section>
 
