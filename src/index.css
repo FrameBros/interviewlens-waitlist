@@ -101,8 +101,13 @@
             align-items: center;
             gap: 25px;
             margin-bottom: 20px;
-            justify-content: center;      
+            justify-content: center;
+                  
   }
+  .logo img {
+    max-width: 80%; /* makes image scale down with container */
+    height: auto; /* keeps aspect ratio intact */
+}
 
         .logo-icon {
             width: 50%;
