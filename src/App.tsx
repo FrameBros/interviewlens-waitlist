@@ -17,8 +17,8 @@ function App() {
     message: ''
   });
 
-  // Function to handle form submission
-  const handleSubmit = async (e) => {
+  // Function to handle form submission with explicit type for the event object
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
 
@@ -73,7 +73,8 @@ function App() {
 
     } catch (error) {
       console.error('❌ Form submission error:', error);
-      if (error.message === 'Email already exists') {
+      // Type guard to safely handle the 'unknown' error type
+      if (error instanceof Error && error.message === 'Email already exists') {
         setModal({
           show: true,
           title: 'Already Subscribed!',
